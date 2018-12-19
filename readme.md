@@ -11,8 +11,6 @@ pipenv shell
 
 pipenv install scrapy
 
-scrapy
-
 ```
 
 ### Install Serverless
