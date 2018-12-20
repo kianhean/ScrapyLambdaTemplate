@@ -1,7 +1,7 @@
 import scrapy
 
 
-class NewSpider(scrapy.Spider):
+class Newspider(scrapy.Spider):
     name = 'newspider'
     start_urls = ['example.com']
 
