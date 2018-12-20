@@ -3,6 +3,13 @@ from scrapy.crawler import CrawlerProcess
 
 from crawlerproject.spiders.newspider import Newspider
 
+# Start sqlite3 fix
+# https://stackoverflow.com/questions/52291998/unable-to-get-results-from-scrapy-on-aws-lambda
+import imp
+import sys
+sys.modules["sqlite"] = imp.new_module("sqlite")
+sys.modules["sqlite3.dbapi2"] = imp.new_module("sqlite.dbapi2")
+# End sqlite3 fix
 
 def run(event, context):
 
